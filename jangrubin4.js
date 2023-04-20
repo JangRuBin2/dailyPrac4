@@ -52,9 +52,10 @@ let booleanResult;
 }
 // isExampleTwo(2,3)
 
-let basicData = [4,6,23,5,94,35,44,66,3];
+let basicData = [4,6,23,5,94,35,44,66];
 let myData = [4,2,44,23,11,5,6,7];
-
+// sort 메서드 활용 순서 정렬
+// console.log(basicData.sort((a,b)=> a-b) + "솔트 왜 안써짐?")
 function exampleThree(array, functionOne, functionTwo) {
   let arrayResult = [[null, null],[null, null],[null, null],[null, null]];
     // array의 모든 원수는 숫자(정수)여야 함
@@ -70,16 +71,21 @@ function exampleThree(array, functionOne, functionTwo) {
   // 실행 됐을 때
   else {
    
-  // array의 length는 짝수여야함, 홀수라면 10을 추가해서 짝수로 만듬
+
     if(arrayLengthEven(array)) {
       // console.log("array는 짝수임")
-      // 매개변수 array는 배열의 순서 한쌍씩 값의 크기를 비교하여
-      // 비교한 작은 값을 arrayResult의 원소배열의 0번째
-      // 큰 값은 arrayResult 원소배열의 첫번째에 넣어준다
+     
+
+       // 매개변수 array는 배열의 순서 한쌍씩 값의 크기를 비교하여
+      array.sort((a,b)=> a - b);
       for(let i=0; i<array.length; i++) {
-        arrayResult.push(array[i])
+        // 비교한 작은 값을 arrayResult의 원소배열의 0번째
+        // 큰 값은 arrayResult 원소배열의 첫번째에 넣어준다
+        arrayResult[i] =array[i]
       }
-    }else {
+    }
+      // array의 length는 짝수여야함, 홀수라면 10을 추가해서 짝수로 만듬
+    else {
       array.push(10);
       return array
     }
