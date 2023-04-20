@@ -50,9 +50,10 @@ let booleanResult;
 // ?isExampleTwo에 exampleOne함수를 호출해서 타입 검사해줌
 // ? 에러가 생기면 throw new Error
 }
-isExampleTwo(2,3)
+// isExampleTwo(2,3)
 
-let basicData = [4,6,23,5,94,35,44,66];
+let basicData = [4,6,23,5,94,35,44,66,3];
+let myData = [4,2,44,23,11,5,6,7];
 
 function exampleThree(array, functionOne, functionTwo) {
   let arrayResult = [[null, null],[null, null],[null, null],[null, null]];
@@ -70,14 +71,23 @@ function exampleThree(array, functionOne, functionTwo) {
   else {
    
   // array의 length는 짝수여야함, 홀수라면 10을 추가해서 짝수로 만듬
-  let arrayLengthCheck = arrayLengthEven(["ㄴㄴ"])
+    if(arrayLengthEven(array)) {
+      console.log("array는 짝수임")
+    }else {
+      array.push(10);
+      return array
+    }
+   // 매개변수 array는 배열의 순서 한쌍씩 값의 크기를 비교하여
+  // for(let i=0; i<basicData.length; i++) {
+
+  // }
   
   }
   
 
   
 
-  // 매개변수 array는 배열의 순서 한쌍씩 값의 크기를 비교하여
+
   // 비교한 작은 값을 arrayResult의 원소배열의 0번째
   // 큰 값은 arrayResult 원소배열의 첫번째에 넣어준다
   
