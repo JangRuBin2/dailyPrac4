@@ -3,9 +3,6 @@ function exampleOne(first, second, dataType) {
     return new Error(`매개변수 first, second 모두 ${dataType} 타입이어야 합니다.`);
   }
 }
-// console.log(exampleOne("ss","Ss","string"))
-// ?exampleOne은 first, second매개변수를 넣고 데이터 타입을 검사함
-// ?-> 입력한 데이터타입과 동일 해야함
 
 function arrayLengthEven(array) {
   if(array.length % 2 === 0) {
@@ -14,15 +11,10 @@ function arrayLengthEven(array) {
     return false;
   }
 }
-// ?arrayLengthEven은 배열을 넣어서 함수를 실행하는데 
-// ?배열의 길이가 짝수면 true를 반환, 홀수면 false를 반환한다
 
 function isExampleTwo(first, second) {
-
   // exampleOne함수를  호출해서 타입검사를 따로 합니다
   // 타입 검사가 실패하면 에러를 발생시켜 함수가 실행되지 않도록 조치함
-  
-  // console.log(exampleOne(["대머리","독수리"], ["알파고","비비고"], 'string'))
   let arrayTypeCheck = exampleOne(2,3,"number")
  if(!arrayTypeCheck) {
 //  실행
@@ -39,8 +31,6 @@ let booleanResult;
   } else {
     return new Error("조건식이 boolean이 아니어서 리턴하지 못했습니다");
   }
-
-
  }
   //타입검사 실패 
  else {
@@ -50,10 +40,9 @@ let booleanResult;
 // ?isExampleTwo에 exampleOne함수를 호출해서 타입 검사해줌
 // ? 에러가 생기면 throw new Error
 }
-// isExampleTwo(2,3)
+isExampleTwo(2,3)
 
 let basicData = [4,6,23,5,94,35,44,66];
-let myData = [4,2,44,23,11,5,6,7];
 // sort 메서드 활용 순서 정렬
 // console.log(basicData.sort((a,b)=> a-b) + "솔트 왜 안써짐?")
 function exampleThree(array, functionOne, functionTwo) {
