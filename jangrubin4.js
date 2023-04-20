@@ -55,6 +55,7 @@ isExampleTwo(2,3)
 let basicData = [4,6,23,5,94,35,44,66];
 
 function exampleThree(array, functionOne, functionTwo) {
+  let arrayResult = [[null, null],[null, null],[null, null],[null, null]];
     // array의 모든 원수는 숫자(정수)여야 함
   for(let i=0; i<array.length; i++) {
     if(typeof(array[i]) !== "number" || (array[i] | 0) !== array[i]) {
@@ -67,7 +68,7 @@ function exampleThree(array, functionOne, functionTwo) {
   }  
   // 실행 됐을 때
   else {
-    let arrayResult = [[null, null],[null, null],[null, null],[null, null]];
+   
   // array의 length는 짝수여야함, 홀수라면 10을 추가해서 짝수로 만듬
   let arrayLengthCheck = arrayLengthEven(["ㄴㄴ"])
   
