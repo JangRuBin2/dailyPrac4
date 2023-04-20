@@ -72,29 +72,19 @@ function exampleThree(array, functionOne, functionTwo) {
    
   // array의 length는 짝수여야함, 홀수라면 10을 추가해서 짝수로 만듬
     if(arrayLengthEven(array)) {
-      console.log("array는 짝수임")
+      // console.log("array는 짝수임")
+      // 매개변수 array는 배열의 순서 한쌍씩 값의 크기를 비교하여
+      // 비교한 작은 값을 arrayResult의 원소배열의 0번째
+      // 큰 값은 arrayResult 원소배열의 첫번째에 넣어준다
+      for(let i=0; i<array.length; i++) {
+        arrayResult.push(array[i])
+      }
     }else {
       array.push(10);
       return array
     }
-   // 매개변수 array는 배열의 순서 한쌍씩 값의 크기를 비교하여
-  // for(let i=0; i<basicData.length; i++) {
-
-  // }
-  
+   
   }
-  
-
-  
-
-
-  // 비교한 작은 값을 arrayResult의 원소배열의 0번째
-  // 큰 값은 arrayResult 원소배열의 첫번째에 넣어준다
-  
-  
-  
-  
-
   return arrayResult;
 }
 
