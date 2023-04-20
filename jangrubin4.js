@@ -3,6 +3,7 @@ function exampleOne(first, second, dataType) {
     return new Error(`매개변수 first, second 모두 ${dataType} 타입이어야 합니다.`);
   }
 }
+
 // ?exampleOne은 first, second배열 두개를 넣고 데이터 타입을 검사함
 // ?(밑의 내용으로 추측 가능)
 // ?-> 입력한 데이터타입과 동일 해야함
@@ -21,7 +22,15 @@ function isExampleTwo(first, second) {
 
   // exampleOne함수를  호출해서 타입검사를 따로 합니다
   // 타입 검사가 실패하면 에러를 발생시켜 함수가 실행되지 않도록 조치함
-  exampleOne(first, second, dataType);
+  
+  // console.log(exampleOne(["대머리","독수리"], ["알파고","비비고"], 'string'))
+  let arrayTypeCheck = exampleOne("ss","Ss","string")
+ if(!arrayTypeCheck) {
+ console.log("정상 실행")
+ } else {
+  throw new Error("타입을 확인해주세요")
+ }
+
 // ?isExampleTwo에 exampleOne함수를 호출해서 타입 검사해줌
 // ? 에러가 생기면 throw new Error
 
@@ -39,7 +48,7 @@ function isExampleTwo(first, second) {
     return new Error("조건식이 boolean이 아니어서 리턴하지 못했습니다");
   }
 }
-
+isExampleTwo()
 
 let basicData = [4,6,23,5,94,35,44,66];
 
@@ -49,6 +58,7 @@ function exampleThree(array, functionOne, functionTwo) {
   // array의 length는 짝수여야함, 홀수라면 10을 추가해서 짝수로 만듬
 
   let arrayResult = [[null, null],[null, null],[null, null],[null, null]];
+
   // 매개변수 array는 배열의 순서 한쌍씩 값의 크기를 비교하여
   // 비교한 작은 값을 arrayResult의 원소배열의 0번째
   // 큰 값은 arrayResult 원소배열의 첫번째에 넣어준다
